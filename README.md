@@ -15,21 +15,22 @@ Este script automatiza o processo de provisionamento de um servidor web básico 
    ```bash
    git clone https://github.com/Nayumt99/Dio-Linux/
 
-Navegue até o diretório do script.
+2. Navegue até o diretório do script.
     ```bash
    cd seu-repositorio
 
-Torne o script executável.
-    ```bash
+3. Torne o script executável.
+```bash
   chmod +x provisionamento_servidor_web.sh
+ ```
 
-Execute o script.
-    ```bash
+4. Execute o script.
+```bash
 ./provisionamento_servidor_web.sh
+ ```
 
-
-Siga as instruções durante a execução do script para configurar o MySQL.
-
+5. Siga as instruções durante a execução do script para configurar o MySQL.
+  ```
 ## Personalização
 
 O script foi projetado para sistemas baseados em Debian/Ubuntu. Se estiver usando outra distribuição, ajuste as instruções de instalação.
