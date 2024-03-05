@@ -16,12 +16,15 @@ Este script automatiza o processo de provisionamento de um servidor web básico 
    git clone https://github.com/Nayumt99/Dio-Linux/
 
 Navegue até o diretório do script.
+   ```bash
    cd seu-repositorio
 
 Torne o script executável.
+ ```bash
   chmod +x provisionamento_servidor_web.sh
 
 Execute o script.
+ ```bash
 ./provisionamento_servidor_web.sh
 
 
