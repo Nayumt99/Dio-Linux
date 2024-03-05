@@ -30,7 +30,7 @@ Este script automatiza o processo de provisionamento de um servidor web básico 
  ```
 
 5. Siga as instruções durante a execução do script para configurar o MySQL.
-  ```
+
 ## Personalização
 
 O script foi projetado para sistemas baseados em Debian/Ubuntu. Se estiver usando outra distribuição, ajuste as instruções de instalação.
