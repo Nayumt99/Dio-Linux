@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Script de provisionamento de servidor web completo
+
+# Atualizar o sistema
+sudo apt update
+sudo apt upgrade -y
+
+# Instalar servidor web (Nginx)
+sudo apt install nginx -y
+
+# Iniciar o servidor web
+sudo systemctl start nginx
+
+# Habilitar o servidor web para iniciar automaticamente na inicialização do sistema
+sudo systemctl enable nginx
+
+# Configurar as regras do firewall para permitir o tráfego HTTP
+sudo ufw allow 'Nginx HTTP'
+
+# Instalar PHP e módulos necessários
+sudo apt install php-fpm php-mysql -y
+
+# Configurar o PHP para trabalhar com o Nginx
+sudo sed -i 's/\;cgi\.fix\_pathinfo=1/cgi\.fix\_pathinfo=0/' /etc/php/7.4/fpm/php.ini
+sudo systemctl restart php7.4-fpm
+
+# Instalar MySQL e configurar
+sudo apt install mysql-server -y
+
+# Iniciar o serviço MySQL e habilitá-lo para iniciar automaticamente
+sudo systemctl start mysql
+sudo systemctl enable mysql
+
+# Configurar o MySQL (substitua 'senha_segura' pela senha desejada)
+sudo mysql_secure_installation
+
+# Exibir informações sobre o servidor
+echo "Servidor web completo provisionado com sucesso!"
+echo "Endereço IP do servidor: $(hostname -I | awk '{print $1}')"
